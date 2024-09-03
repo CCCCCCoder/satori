@@ -111,7 +111,8 @@ def setVersion() -> str:
     if response == '':
         IMAGE_VERSION = 'base'
     else:
-        IMAGE_VERSION = response
+        # IMAGE_VERSION = response
+        IMAGE_VERSION = 'base'
     return IMAGE_VERSION
 
 
