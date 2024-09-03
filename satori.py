@@ -213,6 +213,7 @@ def installSatori():
 def runSatori():
     time.sleep(60)  # waiting for docker on startup I think
     # process = pullSatoriNeuron(IMAGE_VERSION)
+    process = ''
     removeDanglingImages()
     errorMsg = printOutDisplay(process)
     if errorMsg != '':
