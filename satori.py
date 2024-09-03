@@ -109,7 +109,7 @@ def setVersion() -> str:
     global IMAGE_VERSION
     response = requests.get('https://satorinet.io/version/docker')
     if response == '':
-        IMAGE_VERSION = 'latest'
+        IMAGE_VERSION = 'base'
     else:
         IMAGE_VERSION = response
     return IMAGE_VERSION
