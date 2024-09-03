@@ -109,10 +109,9 @@ def setVersion() -> str:
     global IMAGE_VERSION
     response = requests.get('https://satorinet.io/version/docker')
     if response == '':
-        IMAGE_VERSION = 'base'
+        IMAGE_VERSION = 'latest'
     else:
-        # IMAGE_VERSION = response
-        IMAGE_VERSION = 'base'
+        IMAGE_VERSION = response
     return IMAGE_VERSION
 
 
@@ -213,7 +212,7 @@ def installSatori():
 
 def runSatori():
     time.sleep(60)  # waiting for docker on startup I think
-    process = pullSatoriNeuron(IMAGE_VERSION)
+    # process = pullSatoriNeuron(IMAGE_VERSION)
     removeDanglingImages()
     errorMsg = printOutDisplay(process)
     if errorMsg != '':
