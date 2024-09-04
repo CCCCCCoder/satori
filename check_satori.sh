@@ -12,7 +12,7 @@ check_service_logs() {
     echo "Checking logs for service: $service_name..."
 
     # 使用journalctl检查日志
-    journalctl -n 200 -u "$service_name" | grep -qE "model improved!|received message"
+    journalctl -n 200 -u "$service_name" | grep -qE "model improved|received message"
 
     if [ $? -ne 0 ]; then
         echo "Service $service_name failed to start. Logs do not contain 'received message'."
