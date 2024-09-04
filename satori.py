@@ -150,7 +150,7 @@ def getConfigEnv(configPath: str) -> str:
 
 def startSatoriNeuronNative(version: str) -> subprocess.Popen:
     return subprocess.Popen((
-        f'docker run -t --rm --name {CONTAINER_NAME} --cpus 3 '
+        f'docker run -t --rm --name {CONTAINER_NAME} --cpus 2 '
         f'-p {SYNAPSE_PORT}:{24601} '
         f'-v {os.path.join(INSTALL_DIR, "wallet")}:/Satori/Neuron/wallet '
         f'-v {os.path.join(INSTALL_DIR, "config")}:/Satori/Neuron/config '
