@@ -99,7 +99,7 @@ setup_satori_node() {
     
     # 安装Python依赖
     echo "安装Python依赖..."
-    pip3 install -r requirements.txt || { echo "安装Python依赖失败"; exit 1; }
+    pip3 install -r requirements.txt --break-system-packages || { echo "安装Python依赖失败"; exit 1; }
     
     # 创建systemd服务文件
     echo "创建systemd服务文件 satori$node_num.service..."
