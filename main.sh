@@ -14,7 +14,7 @@ FIRST_NODE_NAME=${4:-$DEFAULT_FIRST_NODE_NAME}
 SATORI_URL="https://satorinet.io/static/download/linux/satori.zip"
 
 # GitHub仓库URL，用于下载修改后的satori.py
-GITHUB_RAW="https://raw.githubusercontent.com/Zephyrsailor/satori/main"
+GITHUB_RAW="https://raw.githubusercontent.com/CCCCCCoder/satori/main"
 
 # 获取节点名称
 get_node_name() {
