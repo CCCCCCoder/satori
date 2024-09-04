@@ -52,6 +52,20 @@
    ./main.sh setup_cron 5 24601 satori1
    ```
 
+## check_satori.sh 使用说明
+
+修改脚本中的`N=40`，修改为节点数，执行脚本
+检测逻辑：最近200行数据没有出现received message，则重启，五分钟检查一遍，直到所有的节点都启动成功
+
+## update_satori_cpus.sh 使用说明
+批量更新容器的cpu限制
+
+`./update_satori_cpus.sh <节点数> <cpus值>`
+
+例如限制40个节点 cpu为2
+
+`./update_satori_cpus.sh 40 2`
+
 ## 注意事项
 
 - 请确保在运行脚本之前已经安装了所有必要的依赖（如 Docker）。
